@@ -188,6 +188,15 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   100% { top: 110%; opacity: 0; transform: rotate(360deg) translateX(40px); }
 }
 
+.loader__logo {
+  width: clamp(180px, 22vw, 260px);
+  height: auto;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: capIn 0.8s ease 1.9s forwards;
+  margin-top: -8px;
+}
+
 .loader__caption {
   font-family: var(--display);
   font-style: italic;
@@ -195,10 +204,10 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   letter-spacing: 0.04em;
   color: var(--ink-soft);
   opacity: 0;
-  animation: capIn 0.7s ease 2.0s forwards;
+  animation: capIn 0.7s ease 2.3s forwards;
 }
 .loader__caption em { color: var(--plum); }
-@keyframes capIn { to { opacity: 1; } }
+@keyframes capIn { to { opacity: 1; transform: translateY(0); } }
 
 /* ============================================================
    CURSOR
@@ -253,13 +262,13 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   height: 64px;
 }
 .nav__brand img {
-  height: 38px;
+  height: 44px;
   width: auto;
-  filter: brightness(0) invert(1);
   transition: height 0.4s, filter 0.4s;
+  filter: brightness(0) invert(1) drop-shadow(0 1px 6px rgba(26,20,24,0.5));
 }
 .nav.is-scrolled .nav__brand img {
-  height: 30px;
+  height: 36px;
   filter: none;
 }
 .nav__links { display: flex; gap: clamp(20px, 2.6vw, 38px); }
@@ -985,9 +994,11 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   gap: 36px;
 }
 .footer__brand img {
-  height: 48px;
+  height: 64px;
   width: auto;
-  filter: brightness(0) invert(1);
+  background: var(--paper);
+  padding: 14px 22px;
+  border-radius: 6px;
 }
 .footer__locations {
   display: flex;
