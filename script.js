@@ -180,33 +180,3 @@
   });
 })();
 
-// ---------- Experiences carousel ----------
-(function () {
-  var slides = document.querySelectorAll('.exp-slide');
-  var dots = document.querySelectorAll('.exp-dot');
-  var prev = document.getElementById('expPrev');
-  var next = document.getElementById('expNext');
-  if (!slides.length || !prev || !next) return;
-  var i = 0, count = slides.length, autoTimer;
-  function go(n) {
-    slides[i].classList.remove('is-active');
-    if (dots[i]) dots[i].classList.remove('is-active');
-    i = (n + count) % count;
-    slides[i].classList.add('is-active');
-    if (dots[i]) dots[i].classList.add('is-active');
-  }
-  function startAuto() {
-    stopAuto();
-    autoTimer = setInterval(function () { go(i + 1); }, 7000);
-  }
-  function stopAuto() { if (autoTimer) clearInterval(autoTimer); }
-  prev.addEventListener('click', function () { go(i - 1); startAuto(); });
-  next.addEventListener('click', function () { go(i + 1); startAuto(); });
-  dots.forEach(function (d) {
-    d.addEventListener('click', function () {
-      go(parseInt(d.getAttribute('data-i'), 10));
-      startAuto();
-    });
-  });
-  startAuto();
-})();
