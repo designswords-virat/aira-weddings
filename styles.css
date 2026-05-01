@@ -409,15 +409,31 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 }
 .nav__hamburger {
   display: none;
-  flex-direction: column; gap: 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 101;
+  transition: color 0.3s;
 }
 .nav__hamburger span {
-  display: block; width: 24px; height: 1px;
+  display: block; width: 26px; height: 2px;
   background: currentColor;
-  transition: transform 0.3s;
+  transition: transform 0.35s ease, background 0.35s, opacity 0.25s;
 }
-.nav__hamburger.is-open span:first-child { transform: translateY(3.5px) rotate(45deg); }
-.nav__hamburger.is-open span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+.nav__hamburger.is-open {
+  color: var(--paper);
+}
+.nav__hamburger.is-open span {
+  background: var(--paper);
+  width: 28px;
+  height: 2px;
+}
+.nav__hamburger.is-open span:first-child { transform: translateY(4.5px) rotate(45deg); }
+.nav__hamburger.is-open span:last-child { transform: translateY(-4.5px) rotate(-45deg); }
 @media (max-width: 1080px) {
   .nav__links, .nav__cta { display: none; }
   .nav__hamburger { display: flex; }
