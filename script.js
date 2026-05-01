@@ -6,7 +6,7 @@
     loader.classList.add('is-hidden');
     document.body.classList.add('is-loaded');
   };
-  var min = 1500, max = 2300, start = performance.now(), fired = false;
+  var min = 2400, max = 3200, start = performance.now(), fired = false;
   var fire = function () {
     if (fired) return; fired = true;
     setTimeout(hide, Math.max(0, min - (performance.now() - start)));

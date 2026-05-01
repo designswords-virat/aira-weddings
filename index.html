@@ -19,9 +19,53 @@
 </head>
 <body>
 
-<!-- Loader -->
+<!-- Loader: drawing wreath + petal drift -->
 <div class="loader" id="loader" aria-hidden="true">
-  <img class="loader__logo" src="LOGO/aira-logo.png" alt="Aira — weddings & celebrations">
+  <div class="loader__stage">
+    <!-- Drifting petals -->
+    <span class="petal petal--1"></span>
+    <span class="petal petal--2"></span>
+    <span class="petal petal--3"></span>
+    <span class="petal petal--4"></span>
+    <span class="petal petal--5"></span>
+    <span class="petal petal--6"></span>
+
+    <!-- Wreath SVG (strokes draw themselves) -->
+    <svg class="loader__wreath" viewBox="0 0 400 400" aria-hidden="true">
+      <defs>
+        <symbol id="leaf" viewBox="-10 -22 20 44">
+          <path d="M0,-22 C 6,-16 6,-10 0,0 C -6,-10 -6,-16 0,-22 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+          <path d="M0,0 C 6,6 6,12 0,22 C -6,12 -6,6 0,0 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+          <line x1="0" y1="-22" x2="0" y2="22" stroke="currentColor" stroke-width="0.6"/>
+        </symbol>
+      </defs>
+      <!-- Outer hairline circle -->
+      <circle class="loader__ring" cx="200" cy="200" r="170" fill="none" stroke="currentColor" stroke-width="1"/>
+      <!-- Inner hairline circle -->
+      <circle class="loader__ring loader__ring--inner" cx="200" cy="200" r="150" fill="none" stroke="currentColor" stroke-width="0.6"/>
+      <!-- 12 leaves around the wreath -->
+      <g class="loader__leaves">
+        <use href="#leaf" x="200" y="40" width="20" height="44"/>
+        <use href="#leaf" x="200" y="40" width="20" height="44" transform="rotate(30 200 200)"/>
+        <use href="#leaf" x="200" y="40" width="20" height="44" transform="rotate(60 200 200)"/>
+        <use href="#leaf" x="200" y="40" width="20" height="44" transform="rotate(90 200 200)"/>
+        <use href="#leaf" x="200" y="40" width="20" height="44" transform="rotate(120 200 200)"/>
+        <use href="#leaf" x="200" y="40" width="20" height="44" transform="rotate(150 200 200)"/>
+        <use href="#leaf" x="200" y="40" width="20" height="44" transform="rotate(180 200 200)"/>
+        <use href="#leaf" x="200" y="40" width="20" height="44" transform="rotate(210 200 200)"/>
+        <use href="#leaf" x="200" y="40" width="20" height="44" transform="rotate(240 200 200)"/>
+        <use href="#leaf" x="200" y="40" width="20" height="44" transform="rotate(270 200 200)"/>
+        <use href="#leaf" x="200" y="40" width="20" height="44" transform="rotate(300 200 200)"/>
+        <use href="#leaf" x="200" y="40" width="20" height="44" transform="rotate(330 200 200)"/>
+      </g>
+      <!-- Top crown ornament -->
+      <circle class="loader__dot" cx="200" cy="30" r="4" fill="currentColor"/>
+    </svg>
+
+    <!-- Logo inside the wreath -->
+    <img class="loader__logo" src="LOGO/aira-logo.png" alt="Aira — weddings & celebrations">
+  </div>
+  <p class="loader__caption"><em>One moment —</em> arranging the flowers</p>
 </div>
 
 <!-- Cursor -->
