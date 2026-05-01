@@ -201,85 +201,148 @@
   </div>
 </section>
 
-<!-- 05. EXPERIENCES WITH AIRA — 10 testimonials -->
+<!-- 05. EXPERIENCES WITH AIRA — split-panel carousel -->
 <section class="experiences" id="experiences">
   <div class="experiences__head" data-fade>
-    <p class="eyebrow eyebrow--light">Experiences with Aira</p>
-    <h2 class="section-title section-title--light">Ten weddings,<br><em>ten thank-you notes.</em></h2>
+    <p class="eyebrow">Experiences with Aira</p>
+    <h2 class="section-title">Stories <em>worth retelling.</em></h2>
   </div>
 
-  <div class="experiences__grid">
+  <div class="exp-carousel" id="expCarousel" data-fade>
+    <button class="exp-carousel__btn exp-carousel__btn--prev" id="expPrev" aria-label="Previous experience">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
 
-    <figure class="experience" data-fade>
-      <span class="experience__num">01</span>
-      <h3 class="experience__title">Himani &amp; Nihal — <em>a boho adventure.</em></h3>
-      <p class="experience__loc">Sindhi wedding · Fiesta Resort, Bengaluru</p>
-      <blockquote>"Wish we could give more than 5 stars! They are nothing short of amazing!"</blockquote>
-    </figure>
+    <div class="exp-carousel__track" id="expTrack">
 
-    <figure class="experience" data-fade>
-      <span class="experience__num">02</span>
-      <h3 class="experience__title">A destination wedding <em>in Ooty.</em></h3>
-      <p class="experience__loc">Sunflower mehendi · Hawaiian sangeet · Hotel Gem Park</p>
-      <blockquote>"They have left me speechless with their work and dedication."</blockquote>
-    </figure>
+      <article class="exp-slide is-active">
+        <div class="exp-slide__img" style="background-image: url('https://airaweddingplanners.com/wp-content/uploads/2020/06/Himani-new-floral-1.jpg');"></div>
+        <div class="exp-slide__panel">
+          <span class="exp-slide__num">01 / 10</span>
+          <h3 class="exp-slide__title">Himani &amp; Nihal's <em>Boho Adventure!</em></h3>
+          <p class="exp-slide__copy">Have you heard of this ball of butterflies that few people can make you feel? This couple is just so much of that. A colourful carnival sangeet and a boho-themed ceremony — the kind of weekend that left every guest smiling for days.</p>
+          <blockquote class="exp-slide__quote">"Wish we could give more than 5 stars! They are nothing short of amazing! Our wedding would not have been the fairytale wonder it turned out to be without them."</blockquote>
+          <p class="exp-slide__cite">— Himani &amp; Nihal · Sindhi wedding · <em>Fiesta Resort, Bengaluru</em></p>
+        </div>
+      </article>
 
-    <figure class="experience" data-fade>
-      <span class="experience__num">03</span>
-      <h3 class="experience__title">Laya &amp; Ravi — <em>going by traditions.</em></h3>
-      <p class="experience__loc">Ancestral home · Kannur, Kerala</p>
-      <blockquote>"Sarang and his team delivered above and beyond our visions."</blockquote>
-    </figure>
+      <article class="exp-slide">
+        <div class="exp-slide__img" style="background-image: url('https://airaweddingplanners.com/wp-content/uploads/2020/06/2.jpg');"></div>
+        <div class="exp-slide__panel">
+          <span class="exp-slide__num">02 / 10</span>
+          <h3 class="exp-slide__title">A Destination Wedding <em>with Aira!</em></h3>
+          <p class="exp-slide__copy">Destination weddings should look like this. A sunflower-themed mehendi, a Hawaiian-themed sangeet, a mauve-delight wedding, and a classic vintage reception — all hosted in Ooty, with Aira running every thread.</p>
+          <blockquote class="exp-slide__quote">"They have left me speechless with their work and dedication and gave me the best decor and planning I haven't seen at any other wedding."</blockquote>
+          <p class="exp-slide__cite">— A grateful bride · Ooty · <em>Hotel Gem Park</em></p>
+        </div>
+      </article>
 
-    <figure class="experience" data-fade>
-      <span class="experience__num">04</span>
-      <h3 class="experience__title">Niketh &amp; Ashwathi — <em>a dashing reception.</em></h3>
-      <p class="experience__loc">Arabian Beach Resort, Kannur</p>
-      <blockquote>"The stage decor, pathway, dance-floor designs, lights — AMAZING."</blockquote>
-    </figure>
+      <article class="exp-slide">
+        <div class="exp-slide__img" style="background-image: url('https://airaweddingplanners.com/wp-content/uploads/2020/06/3.jpg');"></div>
+        <div class="exp-slide__panel">
+          <span class="exp-slide__num">03 / 10</span>
+          <h3 class="exp-slide__title">Going by <em>Traditions!</em></h3>
+          <p class="exp-slide__copy">All the way from the United States, our cutest bride Laya and her family decided to host the wedding in their ancestral home in Kannur, Kerala. A traditional Malayali wedding done with the warmth of a family kitchen.</p>
+          <blockquote class="exp-slide__quote">"I didn't think our visions for the wedding were actually going to be accomplished until we talked with Sarang. He and his team delivered above and beyond."</blockquote>
+          <p class="exp-slide__cite">— Laya &amp; Ravi · <em>Ancestral home · Kannur</em></p>
+        </div>
+      </article>
 
-    <figure class="experience" data-fade>
-      <span class="experience__num">05</span>
-      <h3 class="experience__title">Sneha &amp; Anirudh — <em>a Marwari charm.</em></h3>
-      <p class="experience__loc">The Windflower Prakruti, Bengaluru</p>
-      <blockquote>"Sarang helped me with so many options."</blockquote>
-    </figure>
+      <article class="exp-slide">
+        <div class="exp-slide__img" style="background-image: url('https://airaweddingplanners.com/wp-content/uploads/2020/06/4.jpg');"></div>
+        <div class="exp-slide__panel">
+          <span class="exp-slide__num">04 / 10</span>
+          <h3 class="exp-slide__title">A Dashing <em>Reception!</em></h3>
+          <p class="exp-slide__copy">There is a charm about a few people that you never forget — Niketh &amp; Ashwathi are exactly that kind of couple. We designed the entrance pathway, the stage, the dance floor, and the lighting for their reception at Arabian Beach Resort.</p>
+          <blockquote class="exp-slide__quote">"They have done an excellent job for our wedding reception. A hardworking team — the whole team was brilliant! Our entrance pathway Aira designed was outstanding."</blockquote>
+          <p class="exp-slide__cite">— Niketh &amp; Ashwathi · <em>Arabian Beach Resort, Kannur</em></p>
+        </div>
+      </article>
 
-    <figure class="experience" data-fade>
-      <span class="experience__num">06</span>
-      <h3 class="experience__title">Alisha &amp; Akshay — <em>two states, one wedding.</em></h3>
-      <p class="experience__loc">Mallu × Punjabi fusion · Windflower Prakruti, Bengaluru</p>
-      <blockquote>"Aira is amazing! People are still raving about them."</blockquote>
-    </figure>
+      <article class="exp-slide">
+        <div class="exp-slide__img" style="background-image: url('https://airaweddingplanners.com/wp-content/uploads/2020/06/5.jpg');"></div>
+        <div class="exp-slide__panel">
+          <span class="exp-slide__num">05 / 10</span>
+          <h3 class="exp-slide__title">The charm of a <em>Marwari Wedding!</em></h3>
+          <p class="exp-slide__copy">A monsoon wedding in Bengaluru — a stunning tale to reminisce. The gorgeous bride, her fabulous family, and the groom (the royal kind from Jaipur). The mandap was featured by many, and that was the most overwhelming appreciation we could ask for.</p>
+          <blockquote class="exp-slide__quote">"When I started planning, I had no idea what my wedding should look like. Then I met Sarang from Aira — he helped me with so many options. The result was beyond anything I'd imagined."</blockquote>
+          <p class="exp-slide__cite">— Sneha &amp; Anirudh · <em>The Windflower Prakruti, Bengaluru</em></p>
+        </div>
+      </article>
 
-    <figure class="experience" data-fade>
-      <span class="experience__num">07</span>
-      <h3 class="experience__title">Jitin &amp; Archana — <em>cherry-blossom evening.</em></h3>
-      <p class="experience__loc">Kanaka Beach Resort, Kannur</p>
-      <blockquote>"Sarang came down as an angel — he just knew how to make every moment count."</blockquote>
-    </figure>
+      <article class="exp-slide">
+        <div class="exp-slide__img" style="background-image: url('https://airaweddingplanners.com/wp-content/uploads/2020/06/6.jpg');"></div>
+        <div class="exp-slide__panel">
+          <span class="exp-slide__num">06 / 10</span>
+          <h3 class="exp-slide__title">When two states <em>come together!</em></h3>
+          <p class="exp-slide__copy">Alisha hails from the coolest mallu family we've seen, and Akshay from a Punjabi family (the kind that doesn't need an introduction at any wedding). Two states, one wedding, every event a different look.</p>
+          <blockquote class="exp-slide__quote">"Aira is amazing!!!! they did such a fabulous job of the decor at my wedding — people are still raving about them! Every event the decor looked different and beautiful."</blockquote>
+          <p class="exp-slide__cite">— Alisha &amp; Akshay · Mallu × Punjabi fusion · <em>Windflower Prakruti, Bengaluru</em></p>
+        </div>
+      </article>
 
-    <figure class="experience" data-fade>
-      <span class="experience__num">08</span>
-      <h3 class="experience__title">Jastin &amp; Binsu — <em>at the church, a day of bliss.</em></h3>
-      <p class="experience__loc">Christian wedding · vintage decor</p>
-      <blockquote>"Stage designs and all decor was very good. Just trust him."</blockquote>
-    </figure>
+      <article class="exp-slide">
+        <div class="exp-slide__img" style="background-image: url('https://airaweddingplanners.com/wp-content/uploads/2020/06/7.jpg');"></div>
+        <div class="exp-slide__panel">
+          <span class="exp-slide__num">07 / 10</span>
+          <h3 class="exp-slide__title">A ravishing <em>Cherry Blossom Evening!</em></h3>
+          <p class="exp-slide__copy">An overwhelmingly beautiful evening, created for the gorgeous Jitin &amp; Archana. From the weather to the music to the lights to the guest experience — it was more than any expression could capture. A cherry-blossom evening you'd love to know more about.</p>
+          <blockquote class="exp-slide__quote">"Sarang came down as an angel — he just knew how to make our likes and ideas into a much more beautiful reality. They looked into every detail."</blockquote>
+          <p class="exp-slide__cite">— Jitin &amp; Archana · <em>Kanaka Beach Resort, Kannur</em></p>
+        </div>
+      </article>
 
-    <figure class="experience" data-fade>
-      <span class="experience__num">09</span>
-      <h3 class="experience__title">Sravani &amp; Venkatesh — <em>a soulful Telugu wedding.</em></h3>
-      <p class="experience__loc">Signature Club Resorts, Bengaluru</p>
-      <blockquote>"I am beyond ecstatic to have accomplished it with Team Aira."</blockquote>
-    </figure>
+      <article class="exp-slide">
+        <div class="exp-slide__img" style="background-image: url('https://airaweddingplanners.com/wp-content/uploads/2020/06/8.jpg');"></div>
+        <div class="exp-slide__panel">
+          <span class="exp-slide__num">08 / 10</span>
+          <h3 class="exp-slide__title">At the Church, a day of <em>Bliss!</em></h3>
+          <p class="exp-slide__copy">We all know how Christian weddings go — it's all about the ceremony of vows and the exchange of rings, with the blessings of the almighty. Here, we added some elements of vintage decor to that bliss. Most churches don't permit decking up the place, and this place was no exception. So we made the wonder happen at the entrance, the passages, and every area we could.</p>
+          <blockquote class="exp-slide__quote">"Sarang did a great job. Stage designs and all decor was very good. Just have to trust him and he will take care of you."</blockquote>
+          <p class="exp-slide__cite">— Jastin &amp; Binsu · Christian wedding · <em>vintage decor</em></p>
+        </div>
+      </article>
 
-    <figure class="experience" data-fade>
-      <span class="experience__num">10</span>
-      <h3 class="experience__title">From the <em>mother of the bride.</em></h3>
-      <p class="experience__loc">A multi-event family celebration</p>
-      <blockquote>"The decorations were out of this world."</blockquote>
-    </figure>
+      <article class="exp-slide">
+        <div class="exp-slide__img" style="background-image: url('https://airaweddingplanners.com/wp-content/uploads/2020/06/9.jpg');"></div>
+        <div class="exp-slide__panel">
+          <span class="exp-slide__num">09 / 10</span>
+          <h3 class="exp-slide__title">The Perfect Telugu Wedding, <em>Soulful!</em></h3>
+          <p class="exp-slide__copy">Three sparkling days of multiple events kept us on our toes. Families and friends from across the globe arrived for a celebration of our darling bride. We had eighty days to put together a wedding with multiple events and rituals — and we made every one count.</p>
+          <blockquote class="exp-slide__quote">"Sarang &amp; Archana fashioned a wedding we had only dreamt of. I am beyond ecstatic to have accomplished it with Team Aira."</blockquote>
+          <p class="exp-slide__cite">— Sravani &amp; Venkatesh · <em>Signature Club Resorts, Bengaluru</em></p>
+        </div>
+      </article>
 
+      <article class="exp-slide">
+        <div class="exp-slide__img" style="background-image: url('https://airaweddingplanners.com/wp-content/uploads/2020/05/15.jpg');"></div>
+        <div class="exp-slide__panel">
+          <span class="exp-slide__num">10 / 10</span>
+          <h3 class="exp-slide__title">A note from the <em>Mother of the Bride.</em></h3>
+          <p class="exp-slide__copy">From the mehendi to the sangeet to the wedding to the ballroom reception — every event lived up to the dream we'd been carrying for years. The kind of testimony only a mother can write.</p>
+          <blockquote class="exp-slide__quote">"The decorations were out of this world. Sarang &amp; Archana's work made every guest feel they had walked into our daughter's daydream."</blockquote>
+          <p class="exp-slide__cite">— Mother of the bride · <em>A multi-event family celebration</em></p>
+        </div>
+      </article>
+
+    </div>
+
+    <button class="exp-carousel__btn exp-carousel__btn--next" id="expNext" aria-label="Next experience">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+
+  <div class="exp-carousel__dots" id="expDots">
+    <button class="exp-dot is-active" data-i="0" aria-label="Slide 1"></button>
+    <button class="exp-dot" data-i="1" aria-label="Slide 2"></button>
+    <button class="exp-dot" data-i="2" aria-label="Slide 3"></button>
+    <button class="exp-dot" data-i="3" aria-label="Slide 4"></button>
+    <button class="exp-dot" data-i="4" aria-label="Slide 5"></button>
+    <button class="exp-dot" data-i="5" aria-label="Slide 6"></button>
+    <button class="exp-dot" data-i="6" aria-label="Slide 7"></button>
+    <button class="exp-dot" data-i="7" aria-label="Slide 8"></button>
+    <button class="exp-dot" data-i="8" aria-label="Slide 9"></button>
+    <button class="exp-dot" data-i="9" aria-label="Slide 10"></button>
   </div>
 </section>
 
