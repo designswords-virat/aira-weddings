@@ -1,3 +1,10 @@
+// =========================================================
+// AIRA — script.js
+// Loader, custom cursor, scroll reveal, hero parallax,
+// studio breaker parallax, work view-all, mobile menu,
+// smooth anchor scroll, nav state.
+// =========================================================
+
 // ---------- Loader ----------
 (function () {
   var loader = document.getElementById('loader');
@@ -61,12 +68,10 @@
   document.querySelectorAll('[data-fade]').forEach(function (el) { observer.observe(el); });
 })();
 
-// (parallax removed — was overriding left-anchored background-position)
-
 // ---------- Hero parallax ----------
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var bg = document.querySelector('.hero__img');
+  var bg = document.querySelector('.hero__inner');
   if (!bg) return;
   var ticking = false;
   function update() {
@@ -78,6 +83,40 @@
   window.addEventListener('scroll', function () {
     if (!ticking) { requestAnimationFrame(update); ticking = true; }
   }, { passive: true });
+})();
+
+// ---------- Studio breaker parallax ----------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var section = document.querySelector('.studio__breaker');
+  var inner = document.querySelector('.studio__breaker__img');
+  if (!section || !inner) return;
+  inner.style.willChange = 'transform';
+  var vh = window.innerHeight;
+  window.addEventListener('resize', function () { vh = window.innerHeight; });
+  var ticking = false;
+  function update() {
+    var rect = section.getBoundingClientRect();
+    if (rect.bottom < -vh || rect.top > vh * 2) { ticking = false; return; }
+    var center = rect.top + rect.height / 2 - vh / 2;
+    inner.style.transform = 'translate3d(0, ' + (-center * 0.16).toFixed(2) + 'px, 0)';
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  update();
+})();
+
+// ---------- Work — view all ----------
+(function () {
+  var btn = document.getElementById('workViewAll');
+  var more = document.getElementById('workMore');
+  if (!btn || !more) return;
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('.spread--hidden').forEach(function (s) { s.classList.add('is-shown'); });
+    more.style.display = 'none';
+  });
 })();
 
 // ---------- Mobile hamburger ----------
@@ -104,18 +143,6 @@
   });
   menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
-})();
-
-// ---------- Work — view all expand ----------
-(function () {
-  var btn = document.getElementById('workViewAll');
-  var list = document.getElementById('workList');
-  var wrap = document.getElementById('workMore');
-  if (!btn || !list || !wrap) return;
-  btn.addEventListener('click', function () {
-    list.classList.add('is-expanded');
-    wrap.style.display = 'none';
-  });
 })();
 
 // ---------- Smooth anchor scroll ----------

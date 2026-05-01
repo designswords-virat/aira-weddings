@@ -7,21 +7,19 @@
 <meta property="og:title" content="Aira — Editorial Wedding Planning, Bangalore">
 <meta property="og:description" content="A wedding planning house. Bangalore, Cochin, Calicut, Kannur, Mangalore, Delhi.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#F5F1E8">
-<title>Aira — Wedding Planning, Bangalore</title>
+<meta name="theme-color" content="#FDFAF6">
+<title>Aira — Wedding Planning House · Bangalore</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
-<script src="script.js" defer></script>
 </head>
 <body>
 
 <!-- Loader: blooming wedding flower -->
 <div class="loader" id="loader" aria-hidden="true">
-  <!-- Drifting petals -->
   <span class="petal petal--1"></span>
   <span class="petal petal--2"></span>
   <span class="petal petal--3"></span>
@@ -32,15 +30,9 @@
   <span class="petal petal--8"></span>
 
   <div class="loader__stage">
-    <!-- Two interlocking rings + blooming rosette inside -->
     <svg class="loader__art" viewBox="0 0 400 400" aria-hidden="true">
-      <!-- Outer hairline ring -->
       <circle class="ring ring--outer" cx="200" cy="200" r="170" fill="none" stroke="currentColor" stroke-width="0.8"/>
-
-      <!-- Inner ring (interlocked, slightly offset) -->
       <circle class="ring ring--inner" cx="200" cy="200" r="150" fill="none" stroke="currentColor" stroke-width="0.6"/>
-
-      <!-- 8 thin radial guide lines (drawn quickly) -->
       <g class="rays">
         <line x1="200" y1="40" x2="200" y2="80" stroke="currentColor" stroke-width="0.5"/>
         <line x1="200" y1="40" x2="200" y2="80" stroke="currentColor" stroke-width="0.5" transform="rotate(45 200 200)"/>
@@ -51,8 +43,6 @@
         <line x1="200" y1="40" x2="200" y2="80" stroke="currentColor" stroke-width="0.5" transform="rotate(270 200 200)"/>
         <line x1="200" y1="40" x2="200" y2="80" stroke="currentColor" stroke-width="0.5" transform="rotate(315 200 200)"/>
       </g>
-
-      <!-- 6-petal rosette in the center (each petal blooms in sequence) -->
       <g class="bloom">
         <ellipse class="petal-svg" cx="200" cy="155" rx="22" ry="44" transform-origin="200 200" fill="currentColor" opacity="0.85"/>
         <ellipse class="petal-svg" cx="200" cy="155" rx="22" ry="44" transform-origin="200 200" transform="rotate(60 200 200)" fill="currentColor" opacity="0.85"/>
@@ -61,9 +51,7 @@
         <ellipse class="petal-svg" cx="200" cy="155" rx="22" ry="44" transform-origin="200 200" transform="rotate(240 200 200)" fill="currentColor" opacity="0.85"/>
         <ellipse class="petal-svg" cx="200" cy="155" rx="22" ry="44" transform-origin="200 200" transform="rotate(300 200 200)" fill="currentColor" opacity="0.85"/>
       </g>
-
-      <!-- Center bud / pearl -->
-      <circle class="bud" cx="200" cy="200" r="12" fill="#FFFFFF" stroke="currentColor" stroke-width="0.8"/>
+      <circle class="bud" cx="200" cy="200" r="12" fill="#FDFAF6" stroke="currentColor" stroke-width="0.8"/>
       <circle class="bud-inner" cx="200" cy="200" r="6" fill="currentColor"/>
     </svg>
   </div>
@@ -81,13 +69,12 @@
   </a>
   <ul class="nav__links">
     <li><a href="#studio" data-cursor>Studio</a></li>
-    <li><a href="#work" data-cursor>Work</a></li>
-    <li><a href="#experiences" data-cursor>Voices</a></li>
     <li><a href="#services" data-cursor>Services</a></li>
-    <li><a href="#journal" data-cursor>Journal</a></li>
-    <li><a href="#contact" data-cursor>Contact</a></li>
+    <li><a href="#rating" data-cursor>Reviews</a></li>
+    <li><a href="#work" data-cursor>Work</a></li>
+    <li><a href="#testimonials" data-cursor>Voices</a></li>
   </ul>
-  <a href="#contact" class="nav__cta" data-cursor>Enquire</a>
+  <a href="mailto:gethitched@airaweddingplanners.com" class="nav__cta" data-cursor>Plan with us</a>
   <button class="nav__hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span>
   </button>
@@ -97,26 +84,39 @@
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <ul>
     <li><a href="#studio">Studio</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#experiences">Voices</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="#journal">Journal</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#rating">Reviews</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#testimonials">Voices</a></li>
+    <li><a href="mailto:gethitched@airaweddingplanners.com" class="mobile-menu__cta">Plan with us</a></li>
   </ul>
 </div>
 
-<!-- 01. HERO -->
-<section class="hero" id="top">
-  <div class="hero__img" style="background-image: url('https://images.unsplash.com/photo-1606490194859-07c18c9f0968?w=2400&h=1400&fit=crop&q=85&auto=format');"></div>
-  <div class="hero__caption">
-    <span class="hero__roman">I</span>
-    <h1 class="hero__title"><em>Moments of magic</em><br>and effervescence.</h1>
-    <p class="hero__sub">A wedding planning house — Bangalore, Cochin, Calicut, Kannur, Mangalore, Delhi.</p>
+<main id="top">
+
+<!-- ======================= 01 HERO ======================= -->
+<section class="hero">
+  <div class="hero__photo">
+    <div class="hero__inner" style="background-image: url('https://images.unsplash.com/photo-1606490194859-07c18c9f0968?w=2400&h=1400&fit=crop&q=85&auto=format');"></div>
+    <div class="hero__veil"></div>
   </div>
+
+  <span class="hero__rail">I <span>·</span> Aira</span>
+
+  <div class="hero__centre">
+    <p class="hero__eyebrow">A wedding planning house · since 2018</p>
+    <h1 class="hero__wordmark"><em>Aira</em></h1>
+    <p class="hero__tagline">Bangalore <em>·</em> Cochin <em>·</em> Calicut <em>·</em> Kannur <em>·</em> Mangalore <em>·</em> Delhi</p>
+    <a href="mailto:gethitched@airaweddingplanners.com" class="hero__cta" data-cursor>
+      <span>Begin a conversation</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="square"/></svg>
+    </a>
+  </div>
+
   <div class="hero__scroll">Scroll <span aria-hidden="true">↓</span></div>
 </section>
 
-<!-- 02. STUDIO / MANIFESTO -->
+<!-- ======================= 02 STUDIO (kept verbatim) ======================= -->
 <section class="studio" id="studio">
   <div class="studio__rail">
     <span class="rail__roman">II</span>
@@ -132,7 +132,7 @@
       </div>
       <div data-fade>
         <p class="studio__body">From the smallest of details to the largest of arrangements, our attention is the same. Each wedding is planned, designed, and run as if it were the only one we'll ever do.</p>
-        <a href="#contact" class="link" data-cursor>Begin a conversation</a>
+        <a href="#testimonials" class="link" data-cursor>Read what couples say</a>
       </div>
     </div>
   </div>
@@ -143,69 +143,122 @@
   </figure>
 </section>
 
-<!-- 03. TRUST — Top Rated + Featured On (with brand logos) -->
-<section class="trust" id="trust">
-  <div class="trust__inner">
+<!-- ======================= 03 SERVICES ======================= -->
+<section class="services" id="services">
+  <div class="services__rail">
+    <span class="rail__roman">III</span>
+    <span class="rail__label">Services</span>
+  </div>
+  <div class="services__head" data-fade>
+    <h2 class="section-title">Four ceremonies,<br /><em>one house.</em></h2>
+    <p class="services__sub">Reception, ceremony, haldi &amp; mehendi, sangeet — all four planned, designed and run by the same team. No outsourcing, no hand-offs.</p>
+  </div>
 
-    <div class="trust__block" data-fade>
-      <p class="eyebrow">Reviews</p>
-      <h3 class="trust__heading">Top-rated <em>wedding planner</em></h3>
-      <ul class="trust__grid" data-stagger>
-        <li class="badge" data-fade>
-          <div class="badge__logo"><img src="https://airaweddingplanners.com/wp-content/uploads/2020/05/Google-2.jpg" alt="Google"></div>
-          <span class="badge__name"><em>Google</em></span>
-        </li>
-        <li class="badge" data-fade>
-          <div class="badge__logo"><img src="https://airaweddingplanners.com/wp-content/uploads/2020/05/Wedmegood-2.jpg" alt="WedMeGood"></div>
-          <span class="badge__name"><em>WedMeGood</em></span>
-        </li>
-        <li class="badge" data-fade>
-          <div class="badge__logo"><img src="https://airaweddingplanners.com/wp-content/uploads/2020/05/FB.jpg" alt="Facebook"></div>
-          <span class="badge__name"><em>Facebook</em></span>
-        </li>
-        <li class="badge" data-fade>
-          <div class="badge__logo"><img src="https://airaweddingplanners.com/wp-content/uploads/2020/05/Justdial-2.jpg" alt="JustDial"></div>
-          <span class="badge__name"><em>JustDial</em></span>
-        </li>
-      </ul>
-    </div>
-
-    <div class="trust__divider" aria-hidden="true"></div>
-
-    <div class="trust__block" data-fade>
-      <p class="eyebrow">Press</p>
-      <h3 class="trust__heading"><em>Featured</em> on</h3>
-      <ul class="trust__grid" data-stagger>
-        <li class="badge" data-fade>
-          <div class="badge__logo"><img src="https://www.google.com/s2/favicons?domain=deccanherald.com&amp;sz=256" alt="Deccan Herald"></div>
-          <span class="badge__name"><em>Deccan Herald</em></span>
-        </li>
-        <li class="badge" data-fade>
-          <div class="badge__logo"><img src="https://www.google.com/s2/favicons?domain=thehindu.com&amp;sz=256" alt="The Hindu"></div>
-          <span class="badge__name"><em>The Hindu</em></span>
-        </li>
-        <li class="badge" data-fade>
-          <div class="badge__logo"><img src="https://www.google.com/s2/favicons?domain=theteaseinc.in&amp;sz=256" alt="The Tease Inc"></div>
-          <span class="badge__name"><em>The Tease Inc</em></span>
-        </li>
-        <li class="badge" data-fade>
-          <div class="badge__logo"><img src="https://airaweddingplanners.com/wp-content/uploads/2020/05/Talking-Post.jpg" alt="Talking Posts"></div>
-          <span class="badge__name"><em>Talking Posts</em></span>
-        </li>
-      </ul>
-    </div>
-
+  <div class="services__grid">
+    <a class="svc" href="mailto:gethitched@airaweddingplanners.com" data-cursor data-fade>
+      <div class="svc__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2018%2F10%2FReception-3-375x445.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
+      <div class="svc__body">
+        <span class="svc__no">01</span>
+        <h3 class="svc__name"><em>Reception</em></h3>
+        <p class="svc__line">Crystal, candles, ivory drape — the second act.</p>
+      </div>
+    </a>
+    <a class="svc" href="mailto:gethitched@airaweddingplanners.com" data-cursor data-fade>
+      <div class="svc__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2018%2F10%2FTradiotnal-Weddings-11-375x445.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
+      <div class="svc__body">
+        <span class="svc__no">02</span>
+        <h3 class="svc__name"><em>Ceremony</em></h3>
+        <p class="svc__line">The pheras, the mandap, the morning of.</p>
+      </div>
+    </a>
+    <a class="svc" href="mailto:gethitched@airaweddingplanners.com" data-cursor data-fade>
+      <div class="svc__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2018%2F10%2Fpexels-photo-169190-375x445.jpeg&w=1600&q=85&sharp=12&output=webp');"></div>
+      <div class="svc__body">
+        <span class="svc__no">03</span>
+        <h3 class="svc__name"><em>Haldi &amp; Mehendi</em></h3>
+        <p class="svc__line">Marigold drapes, henna stations, three hours of stories.</p>
+      </div>
+    </a>
+    <a class="svc" href="mailto:gethitched@airaweddingplanners.com" data-cursor data-fade>
+      <div class="svc__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2018%2F10%2FTraditional-Weddings-375x445.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
+      <div class="svc__body">
+        <span class="svc__no">04</span>
+        <h3 class="svc__name"><em>Sangeet</em></h3>
+        <p class="svc__line">A dhol that doesn't stop until 2 a.m.</p>
+      </div>
+    </a>
   </div>
 </section>
 
-<!-- 04. WORK -->
+<!-- ======================= 04 RATING ======================= -->
+<section class="rating" id="rating">
+  <div class="rating__rail">
+    <span class="rail__roman">IV</span>
+    <span class="rail__label">Reviews</span>
+  </div>
+
+  <div class="rating__hero" data-fade>
+    <h2 class="section-title section-title--light">Top-rated<br /><em>wedding planner.</em></h2>
+    <p class="rating__sub">Ratings and recognitions from the platforms couples use to find us — and the press that's covered our work.</p>
+  </div>
+
+  <div class="rating__platforms" data-stagger>
+    <a class="badge" href="https://www.google.com/search?q=aira+wedding+planners+bangalore" target="_blank" rel="noopener" data-cursor data-fade>
+      <div class="badge__logo"><img src="https://airaweddingplanners.com/wp-content/uploads/2020/05/Google-2.jpg" alt="Google"></div>
+      <span class="badge__name"><em>Google</em></span>
+      <span class="badge__cta">Read reviews →</span>
+    </a>
+    <a class="badge" href="https://www.wedmegood.com/profile/Aira-Wedding-Planners" target="_blank" rel="noopener" data-cursor data-fade>
+      <div class="badge__logo"><img src="https://airaweddingplanners.com/wp-content/uploads/2020/05/Wedmegood-2.jpg" alt="WedMeGood"></div>
+      <span class="badge__name"><em>WedMeGood</em></span>
+      <span class="badge__cta">Read reviews →</span>
+    </a>
+    <a class="badge" href="https://www.facebook.com/airaweddings/" target="_blank" rel="noopener" data-cursor data-fade>
+      <div class="badge__logo"><img src="https://airaweddingplanners.com/wp-content/uploads/2020/05/FB.jpg" alt="Facebook"></div>
+      <span class="badge__name"><em>Facebook</em></span>
+      <span class="badge__cta">Read reviews →</span>
+    </a>
+    <a class="badge" href="https://www.justdial.com/Bangalore/Aira-Wedding-Planners" target="_blank" rel="noopener" data-cursor data-fade>
+      <div class="badge__logo"><img src="https://airaweddingplanners.com/wp-content/uploads/2020/05/Justdial-2.jpg" alt="JustDial"></div>
+      <span class="badge__name"><em>JustDial</em></span>
+      <span class="badge__cta">Read reviews →</span>
+    </a>
+  </div>
+
+  <div class="rating__divider" aria-hidden="true"></div>
+
+  <div class="rating__press" data-fade>
+    <p class="eyebrow eyebrow--light">Press</p>
+    <h3 class="rating__heading"><em>Featured</em> on</h3>
+    <ul class="rating__pressGrid" data-stagger>
+      <li class="badge badge--light" data-fade>
+        <div class="badge__logo"><img src="https://www.google.com/s2/favicons?domain=deccanherald.com&amp;sz=256" alt="Deccan Herald"></div>
+        <span class="badge__name"><em>Deccan Herald</em></span>
+      </li>
+      <li class="badge badge--light" data-fade>
+        <div class="badge__logo"><img src="https://www.google.com/s2/favicons?domain=thehindu.com&amp;sz=256" alt="The Hindu"></div>
+        <span class="badge__name"><em>The Hindu</em></span>
+      </li>
+      <li class="badge badge--light" data-fade>
+        <div class="badge__logo"><img src="https://www.google.com/s2/favicons?domain=theteaseinc.in&amp;sz=256" alt="The Tease Inc"></div>
+        <span class="badge__name"><em>The Tease Inc</em></span>
+      </li>
+      <li class="badge badge--light" data-fade>
+        <div class="badge__logo"><img src="https://airaweddingplanners.com/wp-content/uploads/2020/05/Talking-Post.jpg" alt="Talking Posts"></div>
+        <span class="badge__name"><em>Talking Posts</em></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= 05 WORK / PORTFOLIO ======================= -->
 <section class="work" id="work">
   <div class="work__rail">
-    <span class="rail__roman">III</span>
+    <span class="rail__roman">V</span>
     <span class="rail__label">Work</span>
   </div>
   <div class="work__head" data-fade>
-    <h2 class="section-title">Twenty-one weddings,<br><em>twenty-one different days.</em></h2>
+    <h2 class="section-title">Twenty-one weddings,<br /><em>twenty-one different days.</em></h2>
   </div>
 
   <div class="work__list" id="workList">
@@ -282,7 +335,11 @@
       </div>
     </article>
 
-    <article class="spread" data-fade>
+    <div id="workMore">
+      <button class="link link--center" id="workViewAll" data-cursor>View all twenty-one weddings</button>
+    </div>
+
+    <article class="spread spread--hidden" data-fade>
       <figure class="spread__figure">
         <div class="spread__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F23.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
         <figcaption>No. 07 · White &amp; Yellow florals</figcaption>
@@ -294,7 +351,7 @@
       </div>
     </article>
 
-    <article class="spread spread--reverse" data-fade>
+    <article class="spread spread--reverse spread--hidden" data-fade>
       <figure class="spread__figure">
         <div class="spread__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F21.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
         <figcaption>No. 08 · Modern evening</figcaption>
@@ -306,19 +363,19 @@
       </div>
     </article>
 
-    <article class="spread" data-fade>
+    <article class="spread spread--hidden" data-fade>
       <figure class="spread__figure">
         <div class="spread__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F20.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
         <figcaption>No. 09 · Multi-family celebration</figcaption>
       </figure>
       <div class="spread__caption">
         <span class="spread__num">09</span>
-        <h3>A blissful <em>amalgamation</em><br>of tradition.</h3>
+        <h3>A blissful <em>amalgamation</em><br />of tradition.</h3>
         <p>Two cultures, one altar — North and South in conversation through the entire weekend.</p>
       </div>
     </article>
 
-    <article class="spread spread--reverse" data-fade>
+    <article class="spread spread--reverse spread--hidden" data-fade>
       <figure class="spread__figure">
         <div class="spread__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F19.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
         <figcaption>No. 10 · Alleppey shores</figcaption>
@@ -330,410 +387,61 @@
       </div>
     </article>
 
-    <article class="spread" data-fade>
-      <figure class="spread__figure">
-        <div class="spread__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F17.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>No. 11 · Romantic aesthetic</figcaption>
-      </figure>
-      <div class="spread__caption">
-        <span class="spread__num">11</span>
-        <h3>Victorian <em>dreams</em><br>come true.</h3>
-        <p>Velvet ottomans, brass candelabras, a string of pearls hanging from the ceiling. Old-world cinema brought to a Bengaluru ballroom.</p>
-      </div>
-    </article>
-
-    <article class="spread spread--reverse" data-fade>
-      <figure class="spread__figure">
-        <div class="spread__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F16.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>No. 12 · Daytime · Chateau</figcaption>
-      </figure>
-      <div class="spread__caption">
-        <span class="spread__num">12</span>
-        <h3>The grandeur <em>begins here.</em></h3>
-        <p>French-chateau decor at noon — open lawns, parasols, glass urns of garden roses. A wedding that began the day, instead of ending it.</p>
-      </div>
-    </article>
-
-    <article class="spread" data-fade>
-      <figure class="spread__figure">
-        <div class="spread__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F15.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>No. 13 · Floral-led design</figcaption>
-      </figure>
-      <div class="spread__caption">
-        <span class="spread__num">13</span>
-        <h3>Divine &amp; exotic,<br><em>a euphoric combination.</em></h3>
-        <p>A floral installation that took six florists three days. Forty thousand stems, mostly local, mostly seasonal, all arranged by hand.</p>
-      </div>
-    </article>
-
-    <article class="spread spread--reverse" data-fade>
-      <figure class="spread__figure">
-        <div class="spread__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F14.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>No. 14 · Rock &amp; Roll sangeet</figcaption>
-      </figure>
-      <div class="spread__caption">
-        <span class="spread__num">14</span>
-        <h3>Dance-away <em>kinda evening.</em></h3>
-        <p>Neon, leather, a live band. The bride's father did "Born to Run" — fully committed.</p>
-      </div>
-    </article>
-
-    <article class="spread" data-fade>
-      <figure class="spread__figure">
-        <div class="spread__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F6.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>No. 15 · Velvet · Floral chandelier</figcaption>
-      </figure>
-      <div class="spread__caption">
-        <span class="spread__num">15</span>
-        <h3>Red &amp; white <em>magic.</em></h3>
-        <p>A velvet ceiling and a chandelier of tuberose. The mandap was small enough to feel intimate, theatrical enough to feel like opera.</p>
-      </div>
-    </article>
-
-    <article class="spread spread--reverse" data-fade>
-      <figure class="spread__figure">
-        <div class="spread__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F7.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>No. 16 · Tamarind Tree, Bengaluru</figcaption>
-      </figure>
-      <div class="spread__caption">
-        <span class="spread__num">16</span>
-        <h3>A <em>paradise</em> beginning.</h3>
-        <p>The Ganapathi installation under the tamarind tree — the kind of detail that makes the elders smile and the photographers stop walking.</p>
-      </div>
-    </article>
-
-    <article class="spread" data-fade>
-      <figure class="spread__figure">
-        <div class="spread__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F8.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>No. 17 · The Leela · Bengaluru</figcaption>
-      </figure>
-      <div class="spread__caption">
-        <span class="spread__num">17</span>
-        <h3>Cocktail evening<br><em>at The Leela.</em></h3>
-        <p>An American-English hybrid — gin bar at one end, kebab counter at the other, a jazz trio in the middle. Everyone stayed past midnight.</p>
-      </div>
-    </article>
-
-    <article class="spread spread--reverse" data-fade>
-      <figure class="spread__figure">
-        <div class="spread__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F10.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>No. 18 · Fun-led celebration</figcaption>
-      </figure>
-      <div class="spread__caption">
-        <span class="spread__num">18</span>
-        <h3>Gala "full" <em>haldi.</em></h3>
-        <p>A haldi that turned into a colour-throw, a brunch, a swim, and a DJ set in the same afternoon. We tracked thirty kilos of turmeric.</p>
-      </div>
-    </article>
-
-    <article class="spread" data-fade>
-      <figure class="spread__figure">
-        <div class="spread__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F13.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>No. 19 · Detail-led design</figcaption>
-      </figure>
-      <div class="spread__caption">
-        <span class="spread__num">19</span>
-        <h3>Those <em>little</em> details.</h3>
-        <p>Embroidered name tags. Hand-painted menus. Coasters made of pressed leaves. The kind of detail nobody asks for but everyone notices.</p>
-      </div>
-    </article>
-
-    <article class="spread spread--reverse" data-fade>
-      <figure class="spread__figure">
-        <div class="spread__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F1-1.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>No. 20 · Traditional · Mandap rituals</figcaption>
-      </figure>
-      <div class="spread__caption">
-        <span class="spread__num">20</span>
-        <h3>A stage <em>of grace.</em></h3>
-        <p>Traditional in form, contemporary in proportion. The kind of mandap that holds a thousand guests' eyes and a single couple's vows.</p>
-      </div>
-    </article>
-
-    <article class="spread" data-fade>
-      <figure class="spread__figure">
-        <div class="spread__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F5.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>No. 21 · ITC Windsor · Bengaluru mehendi</figcaption>
-      </figure>
-      <div class="spread__caption">
-        <span class="spread__num">21</span>
-        <h3>Lounges <em>like these.</em></h3>
-        <p>A low-seated, cushion-strewn mehendi lounge under a pergola. Drinks at hand, henna in progress, time deliberately slowing down.</p>
-      </div>
-    </article>
-
-  </div>
-
-  <div class="work__more" id="workMore" data-fade>
-    <button class="link link--button" id="workViewAll" data-cursor>View all <em>21</em> weddings</button>
   </div>
 </section>
 
-<!-- 05. EXPERIENCES — photo essays -->
-<section class="experiences" id="experiences">
-  <div class="experiences__rail">
-    <span class="rail__roman">IV</span>
+<!-- ======================= 06 TESTIMONIALS ======================= -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials__rail">
+    <span class="rail__roman">VI</span>
     <span class="rail__label">Voices</span>
   </div>
-  <div class="experiences__head" data-fade>
-    <h2 class="section-title"><em>Stories</em><br>worth retelling.</h2>
+
+  <div class="testimonials__head" data-fade>
+    <h2 class="section-title">In our couples'<br /><em>own words.</em></h2>
   </div>
 
-  <div class="experiences__list">
+  <div class="testimonials__grid">
+    <blockquote class="quote quote--featured" data-fade>
+      <p>"From the mehendi, sangeet and wedding to the ballroom reception — <em>the decorations were out of this world.</em> The team made it look easy. It wasn't, of course."</p>
+      <footer>
+        <span class="quote__by">— A mother of the bride</span>
+        <span class="quote__src">via WedMeGood, 2024</span>
+      </footer>
+    </blockquote>
 
-    <article class="essay" data-fade>
-      <figure class="essay__figure">
-        <div class="essay__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F06%2FHimani-new-floral-1.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>Fiesta Resort, Bengaluru — Sindhi wedding, 2023.</figcaption>
-      </figure>
-      <div class="essay__copy">
-        <h3>Himani &amp; Nihal —<br><em>a boho adventure.</em></h3>
-        <blockquote>"Wish we could give more than 5 stars. They are nothing short of amazing — our wedding wouldn't have been the fairytale it turned out to be without them."</blockquote>
-        <cite>— Himani &amp; Nihal</cite>
-      </div>
-    </article>
+    <blockquote class="quote" data-fade>
+      <p>"Sarang and the team made our three-day wedding feel like one long, gentle conversation. Everyone in our family is still talking about the haldi morning."</p>
+      <footer>
+        <span class="quote__by">— A 2024 Aira couple</span>
+        <span class="quote__src">via Google reviews</span>
+      </footer>
+    </blockquote>
 
-    <article class="essay essay--reverse" data-fade>
-      <figure class="essay__figure">
-        <div class="essay__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F06%2F2.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>Hotel Gem Park, Ooty — Sunflower mehendi · Hawaiian sangeet.</figcaption>
-      </figure>
-      <div class="essay__copy">
-        <h3>A destination wedding<br><em>in Ooty.</em></h3>
-        <blockquote>"They have left me speechless with their work and dedication and gave me the best decor and planning I haven't seen at any other wedding."</blockquote>
-        <cite>— A grateful bride</cite>
-      </div>
-    </article>
+    <blockquote class="quote" data-fade>
+      <p>"We chose Aira for the photographs we'd seen, and stayed for the way they made my parents feel at the centre of every decision."</p>
+      <footer>
+        <span class="quote__by">— A bride</span>
+        <span class="quote__src">Bangalore, 2023</span>
+      </footer>
+    </blockquote>
 
-    <article class="essay" data-fade>
-      <figure class="essay__figure">
-        <div class="essay__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F06%2F3.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>Ancestral home, Kannur — Kerala traditional.</figcaption>
-      </figure>
-      <div class="essay__copy">
-        <h3>Laya &amp; Ravi —<br><em>going by traditions.</em></h3>
-        <blockquote>"I didn't think our visions for the wedding were actually going to be accomplished until we talked with Sarang. He and his team delivered above and beyond."</blockquote>
-        <cite>— Laya &amp; Ravi</cite>
-      </div>
-    </article>
-
-    <article class="essay essay--reverse" data-fade>
-      <figure class="essay__figure">
-        <div class="essay__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F06%2F4.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>Arabian Beach Resort, Kannur — Reception, 2023.</figcaption>
-      </figure>
-      <div class="essay__copy">
-        <h3>Niketh &amp; Ashwathi —<br><em>a dashing reception.</em></h3>
-        <blockquote>"They have done an excellent job for our wedding reception. A hardworking team — the whole team was brilliant. Our entrance pathway Aira designed was outstanding."</blockquote>
-        <cite>— Niketh &amp; Ashwathi</cite>
-      </div>
-    </article>
-
-    <article class="essay" data-fade>
-      <figure class="essay__figure">
-        <div class="essay__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F06%2F5.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>The Windflower Prakruti, Bengaluru — Marwari, monsoon.</figcaption>
-      </figure>
-      <div class="essay__copy">
-        <h3>Sneha &amp; Anirudh —<br><em>a Marwari charm.</em></h3>
-        <blockquote>"When I started planning, I had no idea what my wedding should look like. Then I met Sarang from Aira — he helped me with so many options. The result was beyond anything I'd imagined."</blockquote>
-        <cite>— Sneha &amp; Anirudh</cite>
-      </div>
-    </article>
-
-    <article class="essay essay--reverse" data-fade>
-      <figure class="essay__figure">
-        <div class="essay__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F06%2F6.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>Windflower Prakruti, Bengaluru — Mallu × Punjabi fusion.</figcaption>
-      </figure>
-      <div class="essay__copy">
-        <h3>Alisha &amp; Akshay —<br><em>two states, one wedding.</em></h3>
-        <blockquote>"Aira is amazing — they did such a fabulous job of the decor at my wedding, people are still raving about them. Every event the decor looked different and beautiful."</blockquote>
-        <cite>— Alisha &amp; Akshay</cite>
-      </div>
-    </article>
-
-    <article class="essay" data-fade>
-      <figure class="essay__figure">
-        <div class="essay__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F06%2F7.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>Kanaka Beach Resort, Kannur — Cherry-blossom evening.</figcaption>
-      </figure>
-      <div class="essay__copy">
-        <h3>Jitin &amp; Archana —<br><em>cherry-blossom evening.</em></h3>
-        <blockquote>"Sarang came down as an angel — he just knew how to make our likes and ideas into a much more beautiful reality. They looked into every detail."</blockquote>
-        <cite>— Jitin &amp; Archana</cite>
-      </div>
-    </article>
-
-    <article class="essay essay--reverse" data-fade>
-      <figure class="essay__figure">
-        <div class="essay__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F06%2F8.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>Christian wedding — Vintage decor, 2024.</figcaption>
-      </figure>
-      <div class="essay__copy">
-        <h3>Jastin &amp; Binsu —<br><em>at the church, a day of bliss.</em></h3>
-        <blockquote>"Sarang did a great job. Stage designs and all decor was very good. Just have to trust him and he will take care of you."</blockquote>
-        <cite>— Jastin &amp; Binsu</cite>
-      </div>
-    </article>
-
-    <article class="essay" data-fade>
-      <figure class="essay__figure">
-        <div class="essay__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F06%2F9.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>Signature Club Resorts, Bengaluru — Telugu, three days.</figcaption>
-      </figure>
-      <div class="essay__copy">
-        <h3>Sravani &amp; Venkatesh —<br><em>a soulful Telugu wedding.</em></h3>
-        <blockquote>"Sarang &amp; Archana fashioned a wedding we had only dreamt of. I am beyond ecstatic to have accomplished it with Team Aira."</blockquote>
-        <cite>— Sravani &amp; Venkatesh</cite>
-      </div>
-    </article>
-
-    <article class="essay essay--reverse" data-fade>
-      <figure class="essay__figure">
-        <div class="essay__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F15.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-        <figcaption>A multi-event family celebration — note from a mother.</figcaption>
-      </figure>
-      <div class="essay__copy">
-        <h3>From the<br><em>mother of the bride.</em></h3>
-        <blockquote>"From the mehendi to the sangeet to the wedding to the ballroom reception — the decorations were out of this world. Sarang and Archana made every guest feel they had walked into our daughter's daydream."</blockquote>
-        <cite>— Mother of the bride</cite>
-      </div>
-    </article>
-
+    <blockquote class="quote" data-fade>
+      <p>"Editorial without being cold, intimate without being small. Aira is the rare planner who knows when to step forward — and when to step back."</p>
+      <footer>
+        <span class="quote__by">— A WedMeGood review</span>
+        <span class="quote__src">2023</span>
+      </footer>
+    </blockquote>
   </div>
+
+  <a href="mailto:gethitched@airaweddingplanners.com" class="link link--center" data-cursor>Tell us about your wedding</a>
 </section>
 
-<!-- 06. SERVICES -->
-<section class="services" id="services">
-  <div class="services__rail">
-    <span class="rail__roman">V</span>
-    <span class="rail__label">Services</span>
-  </div>
-  <div class="services__head" data-fade>
-    <h2 class="section-title">Four ceremonies,<br><em>one house.</em></h2>
-  </div>
+</main>
 
-  <div class="services__grid">
-    <a class="svc" href="#contact" data-cursor data-fade>
-      <div class="svc__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2018%2F10%2FReception-3-375x445.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-      <h3 class="svc__name"><em>Reception</em></h3>
-      <span class="svc__cta">Plan with us</span>
-    </a>
-    <a class="svc" href="#contact" data-cursor data-fade>
-      <div class="svc__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2018%2F10%2FTradiotnal-Weddings-11-375x445.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-      <h3 class="svc__name"><em>Ceremony</em></h3>
-      <span class="svc__cta">Plan with us</span>
-    </a>
-    <a class="svc" href="#contact" data-cursor data-fade>
-      <div class="svc__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2018%2F10%2Fpexels-photo-169190-375x445.jpeg&w=1600&q=85&sharp=12&output=webp');"></div>
-      <h3 class="svc__name"><em>Haldi &amp; Mehendi</em></h3>
-      <span class="svc__cta">Plan with us</span>
-    </a>
-    <a class="svc" href="#contact" data-cursor data-fade>
-      <div class="svc__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2018%2F10%2FTraditional-Weddings-375x445.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-      <h3 class="svc__name"><em>Sangeet</em></h3>
-      <span class="svc__cta">Plan with us</span>
-    </a>
-  </div>
-</section>
-
-<!-- 07. PROMISE — full-bleed quote -->
-<section class="promise" id="promise">
-  <div class="promise__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F27.jpg&w=1600&q=85&sharp=12&output=webp');" aria-hidden="true"></div>
-  <div class="promise__veil"></div>
-  <div class="promise__inner" data-fade>
-    <span class="rail__roman rail__roman--light">VI</span>
-    <h2 class="promise__quote">"From the mehendi, sangeet and wedding<br>to the ballroom reception —<br><em>the decorations were out of this world.</em>"</h2>
-    <cite class="promise__cite">— A mother of the bride</cite>
-  </div>
-</section>
-
-<!-- 08. JOURNAL -->
-<section class="journal" id="journal">
-  <div class="journal__rail">
-    <span class="rail__roman">VII</span>
-    <span class="rail__label">Journal</span>
-  </div>
-  <div class="journal__head" data-fade>
-    <h2 class="section-title">Notes from<br><em>the planner.</em></h2>
-  </div>
-  <div class="journal__grid">
-    <a class="post" href="https://airaweddingplanners.com/" target="_blank" rel="noopener" data-cursor data-fade>
-      <div class="post__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F04%2FWedding-planners-1-900x720.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-      <span class="post__meta">02 April 2020 · Note 01</span>
-      <h3>Our wedding is just a corona away —<br><em>should I cancel or postpone?</em></h3>
-    </a>
-    <a class="post" href="https://airaweddingplanners.com/" target="_blank" rel="noopener" data-cursor data-fade>
-      <div class="post__img" style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F03%2Fwoman-1901702_1280.jpg&w=1600&q=85&sharp=12&output=webp');"></div>
-      <span class="post__meta">25 March 2020 · Note 02</span>
-      <h3>Five steps to plan<br><em>before meeting your wedding planner.</em></h3>
-    </a>
-  </div>
-</section>
-
-<!-- 09. SOCIAL -->
-<section class="social" id="social">
-  <div class="social__rail">
-    <span class="rail__roman">VIII</span>
-    <span class="rail__label">Instagram</span>
-  </div>
-  <div class="social__head" data-fade>
-    <h2 class="section-title"><em>@airaweddingplanners</em></h2>
-    <p class="social__sub">A daily diary of small details — fresh blooms in the morning, last dances at midnight.</p>
-  </div>
-  <div class="social__grid">
-    <a class="ig" href="https://www.instagram.com/airaweddingplanners/" target="_blank" rel="noopener" data-cursor data-fade><div style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F26.jpg&w=1600&q=85&sharp=12&output=webp');"></div></a>
-    <a class="ig" href="https://www.instagram.com/airaweddingplanners/" target="_blank" rel="noopener" data-cursor data-fade><div style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F14.jpg&w=1600&q=85&sharp=12&output=webp');"></div></a>
-    <a class="ig" href="https://www.instagram.com/airaweddingplanners/" target="_blank" rel="noopener" data-cursor data-fade><div style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F8.jpg&w=1600&q=85&sharp=12&output=webp');"></div></a>
-    <a class="ig" href="https://www.instagram.com/airaweddingplanners/" target="_blank" rel="noopener" data-cursor data-fade><div style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F13.jpg&w=1600&q=85&sharp=12&output=webp');"></div></a>
-    <a class="ig" href="https://www.instagram.com/airaweddingplanners/" target="_blank" rel="noopener" data-cursor data-fade><div style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F19.jpg&w=1600&q=85&sharp=12&output=webp');"></div></a>
-    <a class="ig" href="https://www.instagram.com/airaweddingplanners/" target="_blank" rel="noopener" data-cursor data-fade><div style="background-image: url('https://wsrv.nl/?url=https%3A%2F%2Fairaweddingplanners.com%2Fwp-content%2Fuploads%2F2020%2F05%2F24.jpg&w=1600&q=85&sharp=12&output=webp');"></div></a>
-  </div>
-  <a href="https://www.instagram.com/airaweddingplanners/" target="_blank" rel="noopener" class="link link--center" data-cursor>See more on Instagram</a>
-</section>
-
-<!-- 10. CONTACT -->
-<section class="contact" id="contact">
-  <div class="contact__rail">
-    <span class="rail__roman">IX</span>
-    <span class="rail__label">Contact</span>
-  </div>
-  <div class="contact__head" data-fade>
-    <h2 class="section-title">Tell us<br><em>about the day.</em></h2>
-    <p class="contact__sub">A short note. A first chat over chai. We'll write back the same day.</p>
-  </div>
-
-  <form class="contact__form" data-fade onsubmit="event.preventDefault(); this.querySelector('button').textContent='Sent — we will write back today';">
-    <div class="contact__row">
-      <label class="field"><span>Your name</span><input type="text" name="name" required></label>
-      <label class="field"><span>Email</span><input type="email" name="email" required></label>
-    </div>
-    <div class="contact__row">
-      <label class="field"><span>Phone</span><input type="tel" name="phone"></label>
-      <label class="field"><span>Wedding date</span><input type="text" name="date" placeholder="Tentative is fine"></label>
-    </div>
-    <div class="contact__row">
-      <label class="field"><span>Destination</span><input type="text" name="destination" placeholder="Bangalore, Cochin, Kannur…"></label>
-      <label class="field"><span>Approximate budget</span><input type="text" name="budget"></label>
-    </div>
-    <div class="contact__choice">
-      <span class="contact__choice__lbl">Which functions?</span>
-      <div class="contact__chips">
-        <label class="chip"><input type="checkbox" name="fn" value="mehendi"><span>Mehendi</span></label>
-        <label class="chip"><input type="checkbox" name="fn" value="sangeet"><span>Sangeet</span></label>
-        <label class="chip"><input type="checkbox" name="fn" value="wedding"><span>Wedding</span></label>
-        <label class="chip"><input type="checkbox" name="fn" value="cocktail"><span>Cocktail</span></label>
-        <label class="chip"><input type="checkbox" name="fn" value="reception"><span>Reception</span></label>
-      </div>
-    </div>
-    <label class="field"><span>Anything else we should know</span><input type="text" name="notes" placeholder="Themes, must-haves, hard nos"></label>
-    <button type="submit" class="btn-primary" data-cursor>Send the note</button>
-  </form>
-</section>
-
-<!-- 11. FOOTER -->
-<footer class="footer">
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer" id="contact">
   <div class="footer__inner">
     <a href="#top" class="footer__brand" data-cursor>
       <img src="LOGO/aira-logo.png" alt="Aira — weddings & celebrations">
@@ -755,8 +463,10 @@
   </div>
   <div class="footer__bottom">
     <span>© 2026 Aira Weddings &amp; Celebrations</span>
+    <span>Hand-crafted in South India</span>
   </div>
 </footer>
 
+<script src="script.js" defer></script>
 </body>
 </html>
