@@ -61,28 +61,7 @@
   document.querySelectorAll('[data-fade]').forEach(function (el) { observer.observe(el); });
 })();
 
-// ---------- Magazine parallax — slow image translate within frame ----------
-(function () {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var imgs = document.querySelectorAll('.spread__img, .essay__img, .studio__breaker__img, .post__img, .svc__img');
-  if (!imgs.length) return;
-  var ticking = false;
-  function update() {
-    imgs.forEach(function (img) {
-      var rect = img.getBoundingClientRect();
-      var vh = window.innerHeight;
-      if (rect.bottom < 0 || rect.top > vh) return;
-      var progress = (rect.top + rect.height / 2 - vh / 2) / vh;
-      var offset = progress * -14;
-      img.style.backgroundPosition = 'center calc(50% + ' + offset + 'px)';
-    });
-    ticking = false;
-  }
-  window.addEventListener('scroll', function () {
-    if (!ticking) { requestAnimationFrame(update); ticking = true; }
-  }, { passive: true });
-  update();
-})();
+// (parallax removed — was overriding left-anchored background-position)
 
 // ---------- Hero parallax ----------
 (function () {

@@ -499,9 +499,9 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 .spread__figure { margin: 0; }
 .spread__img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 3;
   background-size: cover;
-  background-position: center;
+  background-position: left center;
   background-color: var(--paper-warm);
   filter: saturate(0.92);
   transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -608,10 +608,10 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 .essay__figure { margin: 0; }
 .essay__img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 3;
   background-size: cover;
-  background-position: center;
-  background-color: var(--ink);
+  background-position: left center;
+  background-color: var(--paper-warm);
   filter: saturate(0.92);
   transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
