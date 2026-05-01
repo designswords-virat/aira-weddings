@@ -530,6 +530,38 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   .work__list { grid-template-columns: 1fr; gap: 48px; }
 }
 
+/* Hide cards 7+ until expanded */
+.work__list .spread:nth-child(n+7) {
+  display: none;
+}
+.work__list.is-expanded .spread:nth-child(n+7) {
+  display: flex;
+  animation: spreadIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes spreadIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.work__more {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(56px, 7vw, 88px);
+}
+.work__list.is-expanded ~ .work__more {
+  display: none;
+}
+.link--button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--ink);
+}
+.link--button em {
+  font-style: italic;
+  color: var(--sage-deep);
+  margin: 0 4px;
+}
+
 /* ============================================================
    05. EXPERIENCES — 2-column photo-essay grid
    ============================================================ */

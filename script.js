@@ -127,6 +127,18 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
 })();
 
+// ---------- Work — view all expand ----------
+(function () {
+  var btn = document.getElementById('workViewAll');
+  var list = document.getElementById('workList');
+  var wrap = document.getElementById('workMore');
+  if (!btn || !list || !wrap) return;
+  btn.addEventListener('click', function () {
+    list.classList.add('is-expanded');
+    wrap.style.display = 'none';
+  });
+})();
+
 // ---------- Smooth anchor scroll ----------
 (function () {
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
