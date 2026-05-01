@@ -684,9 +684,9 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 .badge {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 22px;
-  padding: 32px 26px;
+  align-items: stretch;
+  gap: 28px;
+  padding: 36px 30px 32px;
   background: rgba(253, 250, 246, 0.04);
   border: 1px solid rgba(253, 250, 246, 0.14);
   transition: background 0.3s, border-color 0.3s, transform 0.3s;
@@ -697,38 +697,42 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   transform: translateY(-4px);
 }
 .badge__logo {
-  width: 56px;
-  height: 56px;
+  width: 100%;
+  aspect-ratio: 1/1;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--paper);
-  padding: 6px;
-  border-radius: 4px;
+  padding: 16px;
+  border-radius: 6px;
+  overflow: hidden;
 }
 .badge__logo img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  display: block;
 }
 .badge__name {
   font-family: var(--display);
   font-style: italic;
   font-weight: 300;
-  font-size: clamp(20px, 1.8vw, 26px);
+  font-size: clamp(22px, 2vw, 30px);
   color: var(--paper);
   line-height: 1;
+  text-align: center;
 }
 .badge__name em { font-style: italic; color: var(--paper); }
 .badge__cta {
   font-family: var(--sans);
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--plum-light);
+  text-align: center;
   margin-top: auto;
-  transition: color 0.3s;
+  transition: color 0.3s, gap 0.3s;
 }
 .badge:hover .badge__cta { color: var(--paper); }
 
@@ -756,22 +760,26 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 .rating__heading em { font-style: italic; color: var(--plum-light); }
 .rating__pressGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: clamp(20px, 2.4vw, 36px);
 }
 .badge--light {
   background: transparent;
   border: 1px solid rgba(253, 250, 246, 0.18);
-  flex-direction: row;
-  align-items: center;
-  gap: 18px;
-  padding: 22px 24px;
+  align-items: stretch;
+  gap: 24px;
+  padding: 36px 32px;
 }
 .badge--light .badge__logo {
-  width: 40px; height: 40px;
+  width: 100%;
+  aspect-ratio: 16/7;
+  background: var(--paper);
+  padding: 22px 32px;
+  border-radius: 6px;
 }
 .badge--light .badge__name {
-  font-size: clamp(15px, 1.3vw, 18px);
+  font-size: clamp(18px, 1.6vw, 24px);
+  text-align: center;
 }
 
 /* ============================================================
@@ -1066,7 +1074,7 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   .services__head { grid-template-columns: 1fr; gap: 24px; }
   .services__grid { grid-template-columns: repeat(2, 1fr); }
   .rating__platforms { grid-template-columns: repeat(2, 1fr); }
-  .rating__pressGrid { grid-template-columns: repeat(2, 1fr); }
+  .rating__pressGrid { grid-template-columns: repeat(3, 1fr); }
   .testimonials__grid { grid-template-columns: 1fr 1fr; }
   .quote--featured { grid-row: span 2; grid-column: span 2; }
   .spread, .spread--reverse { grid-template-columns: 1fr; gap: 24px; }
@@ -1102,8 +1110,9 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 
   /* RATING */
   .rating__platforms { grid-template-columns: 1fr; }
-  .rating__pressGrid { grid-template-columns: 1fr 1fr; }
-  .badge { padding: 24px 20px; }
+  .rating__pressGrid { grid-template-columns: 1fr; }
+  .badge { padding: 28px 24px 24px; gap: 22px; }
+  .badge--light { padding: 24px 28px; }
 
   /* WORK */
   .work__list { gap: 56px; }
