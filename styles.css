@@ -484,26 +484,58 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   font-style: italic;
   color: var(--plum);
 }
-.trust__list {
-  display: flex; flex-direction: column;
-  gap: 10px;
+.trust__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
 }
-.trust__list li {
+.badge {
+  display: flex; flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 16px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.4s;
+}
+.badge:hover {
+  transform: translateY(-3px);
+  border-color: var(--plum-soft);
+  box-shadow: 0 14px 28px rgba(124, 31, 77, 0.08);
+}
+.badge__logo {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+.badge__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.badge__name {
   font-family: var(--display);
   font-style: italic;
   font-weight: 300;
-  font-size: clamp(20px, 2.2vw, 28px);
-  line-height: 1.2;
+  font-size: clamp(13px, 1.1vw, 16px);
+  letter-spacing: 0.01em;
   color: var(--ink);
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--rule);
-  transition: color 0.25s, padding-left 0.3s, border-color 0.3s;
-  cursor: default;
+  text-align: center;
+  line-height: 1.2;
 }
-.trust__list li:hover {
-  color: var(--plum);
-  padding-left: 8px;
-  border-bottom-color: var(--plum-soft);
+.badge__name em { font-style: italic; }
+@media (max-width: 480px) {
+  .trust__grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .badge { padding: 18px 12px; }
+  .badge__logo { width: 48px; height: 48px; }
 }
 .trust__divider {
   width: 1px;
