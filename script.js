@@ -1,8 +1,7 @@
 // =========================================================
 // AIRA — script.js
-// Loader, custom cursor, scroll reveal, hero parallax,
-// studio breaker parallax, work view-all, mobile menu,
-// smooth anchor scroll, nav state.
+// Loader, custom cursor, scroll reveal, smooth-wheel scroll,
+// work carousel, mobile menu, smooth anchor scroll, nav state.
 // =========================================================
 
 // ---------- Loader ----------

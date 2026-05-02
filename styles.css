@@ -411,10 +411,9 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 .hero__photo { position: absolute; inset: 0; overflow: hidden; }
 .hero__inner {
   position: absolute;
-  top: -10%; bottom: -10%; left: 0; right: 0;
+  inset: 0;
   background-size: cover;
   background-position: center;
-  will-change: transform;
 }
 .hero__veil {
   position: absolute;
