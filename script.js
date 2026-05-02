@@ -1,7 +1,7 @@
 // =========================================================
 // AIRA — script.js
-// Loader, custom cursor, scroll reveal, smooth-wheel scroll,
-// work carousel, mobile menu, smooth anchor scroll, nav state.
+// Loader, custom cursor, scroll reveal, work carousel,
+// mobile menu, smooth anchor scroll, nav state.
 // =========================================================
 
 // ---------- Loader ----------
@@ -65,64 +65,6 @@
     });
   }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
   document.querySelectorAll('[data-fade]').forEach(function (el) { observer.observe(el); });
-})();
-
-// ---------- Smooth wheel scroll (Lenis-lite, desktop only) ----------
-// Intercepts wheel events and lerps the scroll position toward a target
-// for a softer, "Framer-feel" page scroll. Skipped on touch devices and
-// when prefers-reduced-motion is on. Anchor jumps still go through CSS
-// scroll-behavior: smooth.
-(function () {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
-
-  var current = window.scrollY;
-  var target = current;
-  var ease = 0.10;
-  var raf = null;
-  var isAnimating = false;
-
-  function maxScroll() {
-    return document.documentElement.scrollHeight - window.innerHeight;
-  }
-
-  function loop() {
-    var diff = target - current;
-    if (Math.abs(diff) < 0.3) {
-      current = target;
-      window.scrollTo(0, current);
-      isAnimating = false;
-      raf = null;
-      return;
-    }
-    current += diff * ease;
-    isAnimating = true;
-    window.scrollTo(0, current);
-    raf = requestAnimationFrame(loop);
-  }
-
-  window.addEventListener('wheel', function (e) {
-    if (e.ctrlKey) return; // browser zoom — don't intercept
-    e.preventDefault();
-    target = Math.max(0, Math.min(maxScroll(), target + e.deltaY));
-    if (!raf) raf = requestAnimationFrame(loop);
-  }, { passive: false });
-
-  // If something else scrolls (anchor click, keyboard, search bar), resync
-  window.addEventListener('scroll', function () {
-    if (!isAnimating) {
-      current = window.scrollY;
-      target = current;
-    }
-  }, { passive: true });
-
-  // Resync on focus changes (tab key, form fields scrolling into view)
-  window.addEventListener('keydown', function () {
-    if (!isAnimating) {
-      current = window.scrollY;
-      target = current;
-    }
-  });
 })();
 
 // ---------- Work — carousel scroll buttons + progress ----------
