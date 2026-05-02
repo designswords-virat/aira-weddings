@@ -126,54 +126,6 @@
   });
 })();
 
-// ---------- Generic parallax — any element with data-parallax="0.18" ----------
-(function () {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var elements = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
-  if (!elements.length) return;
-
-  elements.forEach(function (el) { el.style.willChange = 'transform'; });
-
-  var vh = window.innerHeight;
-  window.addEventListener('resize', function () { vh = window.innerHeight; });
-
-  var ticking = false;
-  function update() {
-    elements.forEach(function (el) {
-      var rect = el.getBoundingClientRect();
-      // Skip when far off-screen
-      if (rect.bottom < -vh * 0.3 || rect.top > vh * 1.3) return;
-      var center = rect.top + rect.height / 2 - vh / 2;
-      var factor = parseFloat(el.dataset.parallax) || 0.16;
-      el.style.transform = 'translate3d(0, ' + (-center * factor).toFixed(2) + 'px, 0)';
-    });
-    ticking = false;
-  }
-
-  window.addEventListener('scroll', function () {
-    if (!ticking) { requestAnimationFrame(update); ticking = true; }
-  }, { passive: true });
-
-  update();
-})();
-
-// ---------- Hero parallax ----------
-(function () {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var bg = document.querySelector('.hero__inner');
-  if (!bg) return;
-  var ticking = false;
-  function update() {
-    var y = window.scrollY;
-    if (y > window.innerHeight) { ticking = false; return; }
-    bg.style.transform = 'translate3d(0,' + (y * 0.28) + 'px, 0) scale(' + (1 + y * 0.0003) + ')';
-    ticking = false;
-  }
-  window.addEventListener('scroll', function () {
-    if (!ticking) { requestAnimationFrame(update); ticking = true; }
-  }, { passive: true });
-})();
-
 // ---------- Work — carousel scroll buttons + progress ----------
 (function () {
   var track = document.getElementById('workTrack');
