@@ -1,8 +1,20 @@
 // =========================================================
 // AIRA — script.js
 // Loader, custom cursor, scroll reveal, work carousel,
-// mobile menu, smooth anchor scroll, nav state.
+// mobile menu, smooth anchor scroll, nav state, Lenis.
 // =========================================================
+
+// ---------- Lenis smooth scroll ----------
+// Library defaults (lerp 0.1, expo-out, smoothWheel only).
+// syncTouch stays off so mobile touch scroll remains native.
+(function () {
+  if (typeof Lenis === 'undefined') return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var lenis = new Lenis();
+  window.lenis = lenis;
+  function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
+})();
 
 // ---------- Loader ----------
 (function () {
@@ -127,7 +139,11 @@
       var target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (window.lenis) {
+        window.lenis.scrollTo(target);
+      } else {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
 })();
