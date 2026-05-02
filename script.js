@@ -4,6 +4,21 @@
 // work carousel, mobile menu, smooth anchor scroll, nav state.
 // =========================================================
 
+// ---------- Lenis smooth scroll (wheel + touch) ----------
+(function () {
+  if (typeof Lenis === 'undefined') return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var lenis = new Lenis({
+    duration: 1.1,
+    easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+    smoothWheel: true,
+    touchMultiplier: 1.6
+  });
+  window.lenis = lenis;
+  function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
+})();
+
 // ---------- Loader ----------
 (function () {
   var loader = document.getElementById('loader');
@@ -185,7 +200,11 @@
       var target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (window.lenis) {
+        window.lenis.scrollTo(target, { offset: 0 });
+      } else {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
 })();
