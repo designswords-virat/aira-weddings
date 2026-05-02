@@ -531,12 +531,12 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 .studio__statement {
   font-family: var(--display);
   font-weight: 300;
-  font-size: clamp(28px, 3.4vw, 56px);
+  font-size: clamp(28px, 3.2vw, 52px);
   line-height: 1.2;
   letter-spacing: -0.012em;
   color: var(--ink);
-  margin-bottom: clamp(50px, 7vh, 90px);
-  max-width: 24ch;
+  margin-bottom: clamp(28px, 4vh, 50px);
+  max-width: 22ch;
 }
 .studio__statement em {
   font-style: italic;
@@ -545,10 +545,11 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 }
 .studio__columns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.1fr 1fr;
   gap: clamp(40px, 5vw, 90px);
-  align-items: center;
+  align-items: start;
 }
+.studio__copy { display: flex; flex-direction: column; }
 .studio__photo {
   margin: 0;
   position: relative;
@@ -959,37 +960,22 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 }
 .quote {
   background: var(--paper);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  border: 1px solid var(--rule);
-  overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.quote__photo {
-  aspect-ratio: 4/3;
-  background-size: cover;
-  background-position: center;
-  background-color: var(--paper-deep);
-  transition: transform 0.9s ease;
-}
-.quote:hover .quote__photo { transform: scale(1.04); }
-.quote__body {
-  padding: clamp(24px, 3vw, 40px);
+  padding: clamp(28px, 3vw, 44px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 24px;
-  flex: 1;
+  gap: 26px;
   position: relative;
+  border: 1px solid var(--rule);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-.quote__body::before {
+.quote::before {
   content: "“";
   position: absolute;
-  top: 0; left: clamp(18px, 2vw, 28px);
+  top: 6px; left: 18px;
   font-family: var(--display);
   font-style: italic;
-  font-size: 80px;
+  font-size: 84px;
   line-height: 1;
   color: var(--plum-light);
   opacity: 0.45;
@@ -1003,8 +989,27 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   background: var(--ink);
   color: var(--paper);
 }
-.quote--featured .quote__photo { aspect-ratio: 4/5; }
-.quote--featured .quote__body::before { color: var(--plum-light); opacity: 0.6; }
+.quote--featured::before { color: var(--plum-light); opacity: 0.65; }
+
+.quote__avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--paper-deep);
+  border: 2px solid var(--paper);
+  box-shadow: 0 4px 14px rgba(26, 20, 24, 0.18);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.quote--featured .quote__avatar {
+  width: 96px;
+  height: 96px;
+  border-color: var(--ink);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
 .quote p {
   font-family: var(--display);
   font-style: italic;
