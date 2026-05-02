@@ -855,7 +855,7 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 .work__rail-track::-webkit-scrollbar { display: none; }
 
 .wcard {
-  flex: 0 0 clamp(320px, 60vw, 840px);
+  flex: 0 0 clamp(320px, 48vw, 720px);
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
@@ -864,7 +864,7 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 }
 .wcard:hover { transform: translateY(-4px); }
 .wcard__img {
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/10;
   background-size: cover;
   background-position: center;
   background-color: var(--paper-deep);
