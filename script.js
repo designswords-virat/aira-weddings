@@ -108,14 +108,28 @@
   update();
 })();
 
-// ---------- Work — view all ----------
+// ---------- Work — carousel scroll buttons + progress ----------
 (function () {
-  var btn = document.getElementById('workViewAll');
-  var more = document.getElementById('workMore');
-  if (!btn || !more) return;
-  btn.addEventListener('click', function () {
-    document.querySelectorAll('.spread--hidden').forEach(function (s) { s.classList.add('is-shown'); });
-    more.style.display = 'none';
+  var track = document.getElementById('workTrack');
+  var prev  = document.getElementById('workPrev');
+  var next  = document.getElementById('workNext');
+  var bar   = document.getElementById('workBar');
+  if (!track) return;
+  var step = function () {
+    var card = track.querySelector('.wcard');
+    if (!card) return 320;
+    var styles = window.getComputedStyle(track);
+    var gap = parseFloat(styles.columnGap || styles.gap || 24);
+    return card.getBoundingClientRect().width + gap;
+  };
+  if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  if (next) next.addEventListener('click', function () { track.scrollBy({ left:  step(), behavior: 'smooth' }); });
+  track.addEventListener('scroll', function () {
+    if (!bar) return;
+    var max = Math.max(1, track.scrollWidth - track.clientWidth);
+    var pct = track.scrollLeft / max;
+    var width = 22;
+    bar.style.left = (pct * (100 - width)) + '%';
   });
 })();
 
