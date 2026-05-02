@@ -954,9 +954,8 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   margin: 0 auto;
   padding: 0 var(--pad);
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: clamp(20px, 2.4vw, 36px);
-  grid-auto-rows: auto;
 }
 .quote {
   background: var(--paper);
@@ -984,12 +983,6 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   transform: translateY(-4px);
   box-shadow: 0 18px 40px rgba(26, 20, 24, 0.10);
 }
-.quote--featured {
-  grid-row: span 2;
-  background: var(--ink);
-  color: var(--paper);
-}
-.quote--featured::before { color: var(--plum-light); opacity: 0.65; }
 
 .quote__avatar {
   width: 72px;
@@ -1004,12 +997,6 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   position: relative;
   z-index: 1;
 }
-.quote--featured .quote__avatar {
-  width: 96px;
-  height: 96px;
-  border-color: var(--ink);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
-}
 .quote p {
   font-family: var(--display);
   font-style: italic;
@@ -1020,9 +1007,7 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   position: relative;
   z-index: 1;
 }
-.quote--featured p { color: var(--paper); font-size: clamp(22px, 2.2vw, 32px); }
 .quote p em { color: var(--plum); }
-.quote--featured p em { color: var(--plum-light); }
 .quote footer {
   display: flex;
   flex-direction: column;
@@ -1036,14 +1021,12 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   text-transform: uppercase;
   color: var(--plum-deep);
 }
-.quote--featured .quote__by { color: var(--plum-light); }
 .quote__src {
   font-family: var(--sans);
   font-size: 10.5px;
   letter-spacing: 0.12em;
   color: var(--muted);
 }
-.quote--featured .quote__src { color: rgba(253,250,246,0.55); }
 
 /* ============================================================
    FOOTER
@@ -1154,8 +1137,6 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   .rating__platforms { grid-template-columns: repeat(2, 1fr); }
   .rating__pressGrid { grid-template-columns: repeat(3, 1fr); }
   .testimonials__grid { grid-template-columns: 1fr 1fr; }
-  .quote--featured { grid-row: span 2; grid-column: span 2; }
-  .quote--featured .quote__photo { aspect-ratio: 21/9; }
 }
 
 @media (max-width: 700px) {
@@ -1196,10 +1177,7 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 
   /* TESTIMONIALS */
   .testimonials__grid { grid-template-columns: 1fr; }
-  .quote--featured { grid-row: auto; grid-column: auto; }
-  .quote--featured .quote__photo { aspect-ratio: 4/3; }
-  .quote__body { padding: 26px; gap: 22px; }
-  .quote--featured p { font-size: clamp(20px, 6vw, 28px); }
+  .quote { padding: 28px; gap: 22px; }
 
   /* FOOTER */
   .footer__locations { font-size: 18px; gap: 12px 22px; }
