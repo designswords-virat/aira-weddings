@@ -24,7 +24,10 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+}
 body {
   font-family: var(--sans);
   background: var(--paper);
@@ -554,14 +557,22 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   margin: 0;
   position: relative;
 }
-.studio__photo-img {
+.studio__photo-frame {
+  position: relative;
   aspect-ratio: 4/5;
+  overflow: hidden;
+  background-color: var(--paper-deep);
+}
+.studio__photo-img {
+  position: absolute;
+  top: -10%;
+  bottom: -10%;
+  left: 0;
+  right: 0;
   background-size: cover;
   background-position: center;
-  background-color: var(--paper-deep);
-  transition: transform 0.9s ease;
+  will-change: transform;
 }
-.studio__photo:hover .studio__photo-img { transform: scale(1.02); }
 .studio__photo figcaption {
   font-family: var(--display);
   font-style: italic;

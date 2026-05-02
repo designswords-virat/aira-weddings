@@ -68,6 +68,95 @@
   document.querySelectorAll('[data-fade]').forEach(function (el) { observer.observe(el); });
 })();
 
+// ---------- Smooth wheel scroll (Lenis-lite, desktop only) ----------
+// Intercepts wheel events and lerps the scroll position toward a target
+// for a softer, "Framer-feel" page scroll. Skipped on touch devices and
+// when prefers-reduced-motion is on. Anchor jumps still go through CSS
+// scroll-behavior: smooth.
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
+
+  var current = window.scrollY;
+  var target = current;
+  var ease = 0.10;
+  var raf = null;
+  var isAnimating = false;
+
+  function maxScroll() {
+    return document.documentElement.scrollHeight - window.innerHeight;
+  }
+
+  function loop() {
+    var diff = target - current;
+    if (Math.abs(diff) < 0.3) {
+      current = target;
+      window.scrollTo(0, current);
+      isAnimating = false;
+      raf = null;
+      return;
+    }
+    current += diff * ease;
+    isAnimating = true;
+    window.scrollTo(0, current);
+    raf = requestAnimationFrame(loop);
+  }
+
+  window.addEventListener('wheel', function (e) {
+    if (e.ctrlKey) return; // browser zoom — don't intercept
+    e.preventDefault();
+    target = Math.max(0, Math.min(maxScroll(), target + e.deltaY));
+    if (!raf) raf = requestAnimationFrame(loop);
+  }, { passive: false });
+
+  // If something else scrolls (anchor click, keyboard, search bar), resync
+  window.addEventListener('scroll', function () {
+    if (!isAnimating) {
+      current = window.scrollY;
+      target = current;
+    }
+  }, { passive: true });
+
+  // Resync on focus changes (tab key, form fields scrolling into view)
+  window.addEventListener('keydown', function () {
+    if (!isAnimating) {
+      current = window.scrollY;
+      target = current;
+    }
+  });
+})();
+
+// ---------- Generic parallax — any element with data-parallax="0.18" ----------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var elements = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
+  if (!elements.length) return;
+
+  elements.forEach(function (el) { el.style.willChange = 'transform'; });
+
+  var vh = window.innerHeight;
+  window.addEventListener('resize', function () { vh = window.innerHeight; });
+
+  var ticking = false;
+  function update() {
+    elements.forEach(function (el) {
+      var rect = el.getBoundingClientRect();
+      // Skip when far off-screen
+      if (rect.bottom < -vh * 0.3 || rect.top > vh * 1.3) return;
+      var center = rect.top + rect.height / 2 - vh / 2;
+      var factor = parseFloat(el.dataset.parallax) || 0.16;
+      el.style.transform = 'translate3d(0, ' + (-center * factor).toFixed(2) + 'px, 0)';
+    });
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+
+  update();
+})();
+
 // ---------- Hero parallax ----------
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -83,29 +172,6 @@
   window.addEventListener('scroll', function () {
     if (!ticking) { requestAnimationFrame(update); ticking = true; }
   }, { passive: true });
-})();
-
-// ---------- Studio breaker parallax ----------
-(function () {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var section = document.querySelector('.studio__breaker');
-  var inner = document.querySelector('.studio__breaker__img');
-  if (!section || !inner) return;
-  inner.style.willChange = 'transform';
-  var vh = window.innerHeight;
-  window.addEventListener('resize', function () { vh = window.innerHeight; });
-  var ticking = false;
-  function update() {
-    var rect = section.getBoundingClientRect();
-    if (rect.bottom < -vh || rect.top > vh * 2) { ticking = false; return; }
-    var center = rect.top + rect.height / 2 - vh / 2;
-    inner.style.transform = 'translate3d(0, ' + (-center * 0.16).toFixed(2) + 'px, 0)';
-    ticking = false;
-  }
-  window.addEventListener('scroll', function () {
-    if (!ticking) { requestAnimationFrame(update); ticking = true; }
-  }, { passive: true });
-  update();
 })();
 
 // ---------- Work — carousel scroll buttons + progress ----------
