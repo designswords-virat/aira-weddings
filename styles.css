@@ -1147,7 +1147,8 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   .hero { padding-top: calc(var(--nav-h) + 6px); padding-bottom: 18px; min-height: 620px; }
   .hero__inner { background-image: url('images/mobile%20hero1.jpg') !important; }
   /* Pin text to the very top, CTA absolutely to the very bottom — mandap focal area stays clear */
-  .hero__centre { justify-content: flex-start; gap: 8px; align-self: start; padding-top: 0; }
+  /* Drop position:relative on .hero__centre so the absolute CTA anchors to .hero, not to this container */
+  .hero__centre { position: static; justify-content: flex-start; gap: 8px; align-self: start; padding-top: 0; }
   .hero__scroll { display: none; }
   .hero__cta {
     position: absolute;
@@ -1159,6 +1160,7 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
     font-size: 11px;
     letter-spacing: 0.22em;
     white-space: nowrap;
+    z-index: 3;
   }
   .hero__eyebrow { font-size: 9.5px; letter-spacing: 0.26em; }
   /* Shrink the wordmark so eyebrow + AIRA + locations all fit in the sky area, above the mandap arch */
