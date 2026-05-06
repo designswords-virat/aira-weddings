@@ -1146,7 +1146,7 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 
   /* HERO */
   .hero { padding-top: calc(var(--nav-h) + 24px); padding-bottom: 36px; min-height: 620px; }
-  .hero__inner { background-image: url('images/mobile%20hero1.jpg'); }
+  .hero__inner { background-image: url('images/herohero.jpg'); }
   .hero__eyebrow { font-size: 9.5px; letter-spacing: 0.28em; }
   .hero__wordmark { font-size: clamp(96px, 38vw, 180px); }
   .hero__tagline { font-size: 11.5px; letter-spacing: 0.02em; }
