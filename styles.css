@@ -1163,9 +1163,9 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
     z-index: 3;
   }
   .hero__eyebrow { font-size: 9.5px; letter-spacing: 0.26em; }
-  /* Shrink the wordmark so eyebrow + AIRA + locations all fit in the sky area, above the mandap arch */
-  .hero__wordmark { font-size: clamp(56px, 18vw, 96px); line-height: 0.9; }
-  .hero__tagline { font-size: 10.5px; letter-spacing: 0.02em; }
+  /* Wordmark sized to match the green-box height — fits in the sky area above the mandap */
+  .hero__wordmark { font-size: clamp(86px, 28vw, 150px); line-height: 0.88; }
+  .hero__tagline { font-size: 11px; letter-spacing: 0.02em; }
 
   /* SECTION RAILS */
   .studio__rail, .services__rail, .rating__rail, .work__rail, .testimonials__rail {
